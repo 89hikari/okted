@@ -1,0 +1,21 @@
+version: '3'
+services:
+    tuleap:
+        container_name: tuleap
+        build:
+            context: tuleap
+        ports:
+           - "80:80"
+           - "443:443"
+    rhodecode:
+        container_name: rhodecode
+        build:
+            context: rhodecode
+        ports:
+            - "5000:5000"
+    agola:
+        container_name: agola
+        build:
+            context: agola
+        ports:
+            - "3000:3000"
